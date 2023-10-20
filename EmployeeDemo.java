@@ -2,7 +2,7 @@
 /************************************************************************************************************
  * File        : EmployeeDemo.java
  * Description : To display employee details using inheritance
- * Author      : Anita Mary Joseph
+ * Author      : Elna S Bijo 
  * Version     : 1.0
  * Date        : 13/10/2023
  ************************************************************************************************************/
