@@ -1,6 +1,7 @@
 import java.awt.event.*;
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 
 class GUICalc extends JFrame implements ActionListener {
     JButton numberButtons[] = new JButton[10];
@@ -10,10 +11,14 @@ class GUICalc extends JFrame implements ActionListener {
     JTextField resultField;
 
     GUICalc() {
+    	setTitle("Calculator by Elna");
+    	setSize(500,150);
+    	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JFrame frame = new JFrame("CALCULATOR");
         setLayout(new BorderLayout());
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayout(4, 4));
+        buttonPanel.setLayout(new GridLayout(4, 4,10,5));
+        buttonPanel.setBorder(new EmptyBorder(20,20,20,20));
 
         for (int i = 7; i <=9; i++) {
             numberButtons[i] = new JButton(String.valueOf(i));
