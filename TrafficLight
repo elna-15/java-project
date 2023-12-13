@@ -4,7 +4,7 @@ import javax.swing.*;
 	import java.awt.event.ActionListener;
 
 	public class TrafficLightSimulator extends JFrame implements ActionListener {
-		 private JRadioButton redButton, yellowButton, greenButton;
+		  private JRadioButton redButton, yellowButton, greenButton;
 		    private TrafficLightPanel lightPanel;
 
 		    public TrafficLightSimulator() {
@@ -13,9 +13,9 @@ import javax.swing.*;
 		        setSize(200, 400);
 		        setLayout(new BorderLayout());
 
-		        redButton = new JRadioButton("Red");
+		        redButton = new JRadioButton("Green");
 		        yellowButton = new JRadioButton("Yellow");
-		        greenButton = new JRadioButton("Green");
+		        greenButton = new JRadioButton("Red");
 
 		        ButtonGroup buttonGroup = new ButtonGroup();
 		        buttonGroup.add(redButton);
@@ -41,11 +41,11 @@ import javax.swing.*;
 
 		    public void actionPerformed(ActionEvent e) {
 		        if (e.getSource() == redButton) {
-		            lightPanel.setColors(Color.RED, Color.LIGHT_GRAY, Color.LIGHT_GRAY);
+		            lightPanel.setColors(Color.GREEN, Color.LIGHT_GRAY, Color.LIGHT_GRAY);
 		        } else if (e.getSource() == yellowButton) {
 		            lightPanel.setColors(Color.LIGHT_GRAY, Color.YELLOW, Color.LIGHT_GRAY);
 		        } else if (e.getSource() == greenButton) {
-		            lightPanel.setColors(Color.LIGHT_GRAY, Color.LIGHT_GRAY, Color.GREEN);
+		            lightPanel.setColors(Color.LIGHT_GRAY, Color.LIGHT_GRAY, Color.RED);
 		        }
 		    }
 
